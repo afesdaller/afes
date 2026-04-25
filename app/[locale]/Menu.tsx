@@ -162,7 +162,7 @@ export default function Menu() {
         )}
       </button>
       <div className="fixed top-0 right-0 m-[20px] hidden h-[100px] w-[800px] min-[840]:block">
-        <div className="bg-background/50 absolute inset-x-[38px] top-[11px] bottom-[34px] rounded-full backdrop-blur-[3px]" />
+        <div className="bg-background/40 absolute inset-x-[38px] top-[11px] bottom-[34px] rounded-full backdrop-blur-[3px]" />
         <Image
           src="/menu/menu frame.png"
           alt="left side"

@@ -28,7 +28,7 @@ export default function Scroll(props: Props) {
     <motion.div
       layout
       transition={{ duration: 0.6, ease: "easeInOut" }}
-      className={`relative z-[-1] ${props.className} flex w-screen flex-col items-center`}
+      className={`relative z-[1] ${props.className} flex w-screen flex-col items-center`}
     >
       <motion.div
         layout

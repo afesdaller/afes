@@ -4,12 +4,23 @@
     "skills": "Skills",
     "experience": "Experience",
     "projects": "Projects",
-    "contacts": "Contacts"
+    "contacts": "Contacts",
+    "back": "Back"
   },
   "Home": {
     "subtitle": "Full-stack developer with a creative mindset",
     "about_me": "I believe that code is the language of creation. Leveraging the power of a modern stack, I nurture projects where every detail is infused with meaning and every interaction is pure magic.",
     "what_i_do": "I specialize in crafting premium web applications that captivate from the very first pixel. I offer an escape from standard templates, creating unique web solutions where every interaction becomes part of your brand's story. If you need a website that not only informs but also mesmerizes and stays in memory — I will help bring it to life.",
     "call_to_action": "Let's create something unforgettable together!"
+  },
+  "Skills": {
+    "skills_menu": "Skills Menu",
+    "skills_category": {
+      "Core & Backend": "Core & Backend",
+      "Front-end Architecture": "Front-end Architecture",
+      "Creative & Motion": "Creative & Motion",
+      "Design & Productivity": "Design & Productivity",
+      "Software Engineering": "Software Engineering"
+    }
   }
 }
