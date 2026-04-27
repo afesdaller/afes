@@ -18,7 +18,7 @@ export async function generateMetadata({
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: "Metadata" });
 
-  const baseUrl = "https://afes-portfolio.vercel.app";
+  const baseUrl = "https://afes.vercel.app/";
 
   return {
     metadataBase: new URL(baseUrl),
