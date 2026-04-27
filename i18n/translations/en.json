@@ -22,5 +22,15 @@
       "Design & Productivity": "Design & Productivity",
       "Software Engineering": "Software Engineering"
     }
+  },
+  "Experience": {
+    "job_title": "Job Title",
+    "company": "Company",
+    "period": "Period",
+    "responsibilities": "Responsibilities and achievements",
+    "hyper_factory": "Served as a team lead on one of the projects: coordinated the team, made technical decisions, and was responsible for code quality and deadlines. Also independently developed several small hyper-casual games. Held the position of lead developer on a large-scale RPG project — responsible for architecture, core game logic, and system integration — until changing jobs.",
+    "we_ar_studio": "Created several prototypes for AR/VR applications using Unity and relevant SDKs (AR Foundation, XR Interaction Toolkit). Developed a full-fledged application with interactive virtual environment engagement, focusing on UX, performance, and stability.",
+    "red_beat": "Worked on a large top-down shooter project. Developed key game components: bot logic, NPC navigation and behavior, game map generation and optimization, and also worked on the UI and various project services.",
+    "outsource": "I've worked on several projects. I handled everything related to the interface and assisted with backend logic. \n Front-end: Created adaptive layouts. Configured interface animations. \n Back-end: Implemented a user authentication system and assembled a convenient admin panel for content management."
   }
 }

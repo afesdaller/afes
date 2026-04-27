@@ -94,6 +94,7 @@ function qFromAxis(ax: number, ay: number, az: number, angle: number): Quat {
   return { w: Math.cos(angle * 0.5), x: ax * s, y: ay * s, z: az * s };
 }
 function qRotVec(q: Quat, px: number, py: number, pz: number) {
+  // Optimised q*(0,p)*q†
   const tx = 2 * (q.y * pz - q.z * py);
   const ty = 2 * (q.z * px - q.x * pz);
   const tz = 2 * (q.x * py - q.y * px);
@@ -181,6 +182,7 @@ export default function page({
 
   const projectPoint = useCallback((px: number, py: number, pz: number) => {
     return qRotVec(quatRef.current, px, py, pz);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   const getProjected = useCallback((): Projected[] => {
@@ -520,7 +522,11 @@ export default function page({
   };
 
   return (
-    <div
+    <motion.div
+      initial={{ opacity: 0, filter: "blur(5px)" }}
+      animate={{ opacity: 1, filter: "blur(0px)" }}
+      exit={{ opacity: 0, filter: "blur(5px)" }}
+      transition={{ duration: 0.7, ease: "easeOut" }}
       ref={wrapRef}
       className="user-select-none relative flex w-full flex-col items-center"
     >
@@ -533,8 +539,7 @@ export default function page({
       >
         {currentCategory ? currentCategory : tSkills("skills_menu")}
       </motion.h2>
-
-      <AnimatePresence>
+      <AnimatePresence mode="popLayout">
         {currentCategory && (
           <motion.button
             initial={{ opacity: 0, y: -5 }}
@@ -542,7 +547,7 @@ export default function page({
             exit={{ opacity: 0, y: 5 }}
             transition={{ duration: 0.3 }}
             onClick={navigateBack}
-            className="border-[rgba(153, 101, 21)] text-shadow mb-4 cursor-pointer rounded-[10px] border-[2px] px-[15px] py-[5px] font-[14px] font-bold backdrop-blur-[8px]"
+            className="border-[rgba(153, 101, 21)] text-shadow mb-4 cursor-pointer rounded-[10px] border-[2px] px-[15px] py-[5px] font-bold backdrop-blur-[8px]"
           >
             ← {tNavMenu("back")}
           </motion.button>
@@ -579,6 +584,6 @@ export default function page({
           }
         }}
       />
-    </div>
+    </motion.div>
   );
 }

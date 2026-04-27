@@ -54,7 +54,7 @@ export default function Scroll(props: Props) {
       <motion.div
         layout
         transition={{ duration: 0.3, ease: "easeInOut" }}
-        className="mt-[-6%] mb-[2%] flex w-[65%] flex-col items-center min-[840px]:w-[50%]"
+        className="relative mt-[-6%] mb-[2%] flex w-[65%] flex-col items-center min-[840px]:w-[50%]"
       >
         <AnimatePresence mode="popLayout">
           <motion.div
