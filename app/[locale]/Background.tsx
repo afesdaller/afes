@@ -53,11 +53,22 @@ const initGlobalPixi = async () => {
     createWavyMesh(textureTree, true),
   ];
 
+  let lastWidth = 0;
+  let lockedHeight = 0;
+
   const resizeHandler = () => {
-    const minWidth = 400;
-    const maxWidth = 1920;
     const sw = app.screen.width;
     const sh = app.screen.height;
+    const isTouch = window.matchMedia("(pointer: coarse)").matches;
+
+    // Если это тач-устройство и ширина не менялась, не обновляем lockedHeight
+    if (!isTouch || sw !== lastWidth || lockedHeight === 0) {
+      lastWidth = sw;
+      lockedHeight = sh;
+    }
+
+    const minWidth = 400;
+    const maxWidth = 1920;
     const breakpoint = 768;
 
     const clampedWidth = Math.max(minWidth, Math.min(maxWidth, sw));
@@ -73,11 +84,11 @@ const initGlobalPixi = async () => {
     if (sw < breakpoint) {
       objects[1].mesh.pivot.set(textureTree.width / 2, textureTree.height);
       objects[1].mesh.x = sw / 2;
-      objects[1].mesh.y = sh;
+      objects[1].mesh.y = lockedHeight; // Используем зафиксированную высоту
     } else {
       objects[1].mesh.pivot.set(textureTree.width, textureTree.height);
       objects[1].mesh.x = sw;
-      objects[1].mesh.y = sh;
+      objects[1].mesh.y = lockedHeight; // Используем зафиксированную высоту
     }
   };
 
@@ -152,7 +163,7 @@ export default function Background() {
   return (
     <motion.div
       ref={canvasRef}
-      className="pointer-events-none fixed inset-0 -z-10 h-screen w-screen overflow-hidden"
+      className="pointer-events-none fixed inset-0 -z-10 h-[100dvh] w-screen overflow-hidden"
       animate={{
         scale: scaleBack ? 1.1 : 1,
       }}
