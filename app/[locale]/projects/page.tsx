@@ -27,7 +27,7 @@ export default function Page() {
           alt="github"
           width={100}
           height={100}
-          className="md drop-shadow-[0_4px_10px_rgba(0,0,0,0.5)] hover:drop-shadow-[0_0_20px_rgba(212,175,55,0.9)]"
+          className="md drop-shadow-[0_4px_15px_rgba(0,0,0,0.3)] hover:drop-shadow-[0_0_20px_rgba(212,175,55,0.9)]"
         />
       </a>
     </motion.div>

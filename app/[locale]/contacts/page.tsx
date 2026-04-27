@@ -13,8 +13,8 @@ export default function Page() {
       transition={{ duration: 0.7, ease: "easeOut" }}
       className="mt-[40px] flex flex-col items-center"
     >
-      <h2 className="text-shadow">{t("cta")}</h2>
-      <div className="mt-[20px] flex items-center justify-center gap-[30px]">
+      <h3 className="text-shadow text-center">{t("cta")}</h3>
+      <div className="mt-[20px] flex items-center justify-center gap-[10px] min-[840px]:gap-[30px]">
         <a
           href="https://t.me/afesdaller"
           target="_blank"
@@ -25,7 +25,7 @@ export default function Page() {
             alt="telegram"
             width={100}
             height={100}
-            className="drop-shadow-[0_4px_15px_rgba(0,0,0,0.3)] transition-all duration-300 hover:drop-shadow-[0_0_30px_rgba(212,175,55,0.9)]"
+            className="h-[100px] w-[100px] max-w-none drop-shadow-[0_4px_15px_rgba(0,0,0,0.3)] transition-all duration-300 hover:drop-shadow-[0_0_30px_rgba(212,175,55,0.9)]"
           />
           <p className="text-shadow">@afesdaller</p>
         </a>
@@ -39,7 +39,7 @@ export default function Page() {
             alt="gmail"
             width={100}
             height={100}
-            className="drop-shadow-[0_4px_15px_rgba(0,0,0,0.3)] transition-all duration-300 hover:drop-shadow-[0_0_20px_rgba(212,175,55,0.9)]"
+            className="h-[100px] w-[100px] max-w-none drop-shadow-[0_4px_15px_rgba(0,0,0,0.3)] transition-all duration-300 hover:drop-shadow-[0_0_20px_rgba(212,175,55,0.9)]"
           />
           <p className="text-shadow">afesdaller@gmail.com</p>
         </a>
@@ -53,7 +53,7 @@ export default function Page() {
             alt="github"
             width={100}
             height={100}
-            className="drop-shadow-[0_4px_15px_rgba(0,0,0,0.3)] transition-all duration-200 hover:drop-shadow-[0_0_20px_rgba(212,175,55,0.9)]"
+            className="h-[100px] w-[100px] max-w-none drop-shadow-[0_4px_15px_rgba(0,0,0,0.3)] transition-all duration-200 hover:drop-shadow-[0_0_20px_rgba(212,175,55,0.9)]"
           />
           <p className="text-shadow">afesdaller</p>
         </a>

@@ -1,7 +1,7 @@
 export const skillsMenu = [
   {
     lable: "Core & Backend",
-    src: "/skills/core & backend.png",
+    src: "/skills/core and backend.png",
     alt: "Core & Backend",
   },
   {
@@ -11,12 +11,12 @@ export const skillsMenu = [
   },
   {
     lable: "Creative & Motion",
-    src: "/skills/creative & motion.png",
+    src: "/skills/creative and motion.png",
     alt: "Creative & Motion",
   },
   {
     lable: "Design & Productivity",
-    src: "/skills/design & productivity.png",
+    src: "/skills/design and productivity.png",
     alt: "Design & Productivity",
   },
   {
