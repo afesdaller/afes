@@ -42,7 +42,7 @@ export default function Home() {
           alt="photo frame"
           width={500}
           height={500}
-          className="relative z-1 h-auto w-[300px] max-w-none rounded-full drop-shadow-[0_0_20px_rgba(0,0,0,0.5)] min-[840px]:w-[350px]"
+          className="relative z-1 h-auto w-[85%] max-w-[300px] rounded-full drop-shadow-[0_0_20px_rgba(0,0,0,0.5)] min-[840px]:w-[350px]"
           priority
         />
         <Image
@@ -50,12 +50,12 @@ export default function Home() {
           alt="photo frame"
           width={230}
           height={230}
-          className="absolute top-[50px] left-1/2 z-0 h-auto w-[200px] -translate-x-1/2 rounded-full drop-shadow-[0_0_10px_rgba(0,0,0,0.5)] backdrop-blur-[5px] min-[840px]:top-[62px] min-[840px]:w-[230px]"
+          className="absolute top-[16%] left-1/2 z-0 h-auto w-[60%] max-w-[200px] -translate-x-1/2 rounded-full drop-shadow-[0_0_10px_rgba(0,0,0,0.5)] backdrop-blur-[5px] min-[840px]:top-[62px] min-[840px]:w-[230px]"
           priority
         />
       </div>
 
-      <h2 className="text-shadow text-center font-bold">{t("subtitle")}</h2>
+      <h3 className="text-shadow text-center font-bold">{t("subtitle")}</h3>
       <div className="relative flex flex-col items-center">
         <Image
           src="/page/line.png"

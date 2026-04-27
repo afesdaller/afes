@@ -43,6 +43,8 @@ body {
   }
 }
 
+
+
 h1 {
   font-size: 48px;
 }
@@ -57,4 +59,26 @@ h3 {
 
 h4 {
   font-size: 22px;
+}
+
+@media (max-width: 399px) {
+  body {
+    font-size: 12px;
+  }
+
+  h1 {
+    font-size: 20px;
+  }
+
+  h2 {
+    font-size: 16px;
+  }
+
+  h3 {
+    font-size: 14px;
+  }
+
+  h4 {
+    font-size: 12px;
+  }
 }

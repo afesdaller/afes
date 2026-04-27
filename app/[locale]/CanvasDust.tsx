@@ -118,6 +118,7 @@ export default function CanvasDust({
   const mouseRef = useRef({ x: -9999, y: -9999, active: false });
   const hasMouseRef = useRef(false);
   const isMobileRef = useRef(false);
+  const isTouchRef = useRef(false);
   const mobileMenuOpenRef = useRef(false);
   const particlesRef = useRef<Particle[]>([]);
   const columnsRef = useRef<RuneColumn[]>([]);
@@ -206,10 +207,18 @@ export default function CanvasDust({
     const ctx = canvas.getContext("2d")!;
 
     isMobileRef.current = window.innerWidth < CONSTANTS.MOBILE_BREAKPOINT;
+    isTouchRef.current = window.matchMedia("(pointer: coarse)").matches;
 
     const resize = () => {
-      canvas.width = window.innerWidth;
-      canvas.height = window.innerHeight;
+      const widthChanged = canvas.width !== window.innerWidth;
+      const heightChanged = canvas.height !== window.innerHeight;
+
+      if (!isTouchRef.current || widthChanged || canvas.height === 0) {
+        canvas.width = window.innerWidth;
+        canvas.height = window.innerHeight;
+      } else if (widthChanged) {
+        canvas.width = window.innerWidth;
+      }
 
       const wasMobile = isMobileRef.current;
       isMobileRef.current = window.innerWidth < CONSTANTS.MOBILE_BREAKPOINT;
@@ -222,6 +231,7 @@ export default function CanvasDust({
     window.addEventListener("resize", resize);
 
     const onMouseMove = (e: MouseEvent) => {
+      if (isTouchRef.current) return;
       hasMouseRef.current = true;
       mouseRef.current = { x: e.clientX, y: e.clientY, active: true };
     };
@@ -230,6 +240,7 @@ export default function CanvasDust({
     };
 
     const onClick = (e: MouseEvent) => {
+      if (isTouchRef.current) return;
       if (hasMouseRef.current) {
         const { x, y } = mouseRef.current;
         particlesRef.current.forEach((p) => {
@@ -276,6 +287,7 @@ export default function CanvasDust({
       const { x: mx, y: my, active } = mouseRef.current;
 
       if (
+        !isTouchRef.current &&
         hasMouseRef.current &&
         active &&
         ts - lastSpawnRef.current > 1000 / spawnRate

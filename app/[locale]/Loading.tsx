@@ -10,7 +10,7 @@ export default function Loading() {
   const animationEndRef = useRef(false);
 
   useEffect(() => {
-    const minWidth = 400;
+    const minWidth = 320;
     const maxWidth = 1920;
 
     const resize = () => {
@@ -19,7 +19,7 @@ export default function Loading() {
         Math.min(maxWidth, window.innerWidth),
       );
       const t = (clampedWidth - minWidth) / (maxWidth - minWidth);
-      const scale = 0.5 + (1 - 0.5) * t;
+      const scale = 0.35 + (1 - 0.35) * t;
       setLetterScaleScale(scale);
     };
 
@@ -123,7 +123,7 @@ export default function Loading() {
           transition={{ duration: 1, ease: "easeInOut" }}
           className="bg-background fixed inset-0 z-9999"
         >
-          <div className="relative top-[93px] flex h-[291px] justify-center">
+          <div className="relative top-[40px] flex h-[291px] justify-center min-[840px]:top-[93px]">
             <motion.div
               initial={{
                 opacity: 0,
@@ -144,7 +144,7 @@ export default function Loading() {
             </motion.div>
             <div
               style={{ scale: letterScale }}
-              className="absolute bottom-[-340px] left-1/2 flex h-[360px] w-[800px] origin-top -translate-x-1/2 justify-between"
+              className="absolute bottom-[-380px] left-1/2 flex h-[360px] w-[800px] origin-top -translate-x-1/2 justify-between"
             >
               <motion.div
                 initial={{

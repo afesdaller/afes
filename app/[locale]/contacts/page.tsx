@@ -25,9 +25,9 @@ export default function Page() {
             alt="telegram"
             width={100}
             height={100}
-            className="h-[100px] w-[100px] max-w-none drop-shadow-[0_4px_15px_rgba(0,0,0,0.3)] transition-all duration-300 hover:drop-shadow-[0_0_30px_rgba(212,175,55,0.9)]"
+            className="h-[60px] w-[60px] max-w-none drop-shadow-[0_4px_15px_rgba(0,0,0,0.3)] transition-all duration-300 hover:drop-shadow-[0_0_30px_rgba(212,175,55,0.9)] min-[400px]:h-[80px] min-[400px]:w-[80px] min-[840px]:h-[100px] min-[840px]:w-[100px]"
           />
-          <p className="text-shadow">@afesdaller</p>
+          <p className="text-shadow text-[10px] min-[400px]:text-[12px] min-[840px]:text-[16px]">@afesdaller</p>
         </a>
         <a
           href="mailto:afesdaller@gmail.com"
@@ -39,9 +39,9 @@ export default function Page() {
             alt="gmail"
             width={100}
             height={100}
-            className="h-[100px] w-[100px] max-w-none drop-shadow-[0_4px_15px_rgba(0,0,0,0.3)] transition-all duration-300 hover:drop-shadow-[0_0_20px_rgba(212,175,55,0.9)]"
+            className="h-[60px] w-[60px] max-w-none drop-shadow-[0_4px_15px_rgba(0,0,0,0.3)] transition-all duration-300 hover:drop-shadow-[0_0_20px_rgba(212,175,55,0.9)] min-[400px]:h-[80px] min-[400px]:w-[80px] min-[840px]:h-[100px] min-[840px]:w-[100px]"
           />
-          <p className="text-shadow">afesdaller@gmail.com</p>
+          <p className="text-shadow text-[10px] min-[400px]:text-[12px] min-[840px]:text-[16px]">afesdaller@gmail.com</p>
         </a>
         <a
           href="https://github.com/afesdaller"
@@ -53,9 +53,9 @@ export default function Page() {
             alt="github"
             width={100}
             height={100}
-            className="h-[100px] w-[100px] max-w-none drop-shadow-[0_4px_15px_rgba(0,0,0,0.3)] transition-all duration-200 hover:drop-shadow-[0_0_20px_rgba(212,175,55,0.9)]"
+            className="h-[60px] w-[60px] max-w-none drop-shadow-[0_4px_15px_rgba(0,0,0,0.3)] transition-all duration-200 hover:drop-shadow-[0_0_20px_rgba(212,175,55,0.9)] min-[400px]:h-[80px] min-[400px]:w-[80px] min-[840px]:h-[100px] min-[840px]:w-[100px]"
           />
-          <p className="text-shadow">afesdaller</p>
+          <p className="text-shadow text-[10px] min-[400px]:text-[12px] min-[840px]:text-[16px]">afesdaller</p>
         </a>
       </div>
       <p className="text-shadow mt-[20px]">Kyiv, Ukraine 2026</p>
