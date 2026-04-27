@@ -34,7 +34,7 @@ export default async function RootLayout({
   return (
     <html lang={locale}>
       <body className={`${cormorant.variable}`}>
-        {/* <Loading /> */}
+        <Loading />
         <NextIntlClientProvider messages={messages}>
           <Background />
           <CanvasDust />

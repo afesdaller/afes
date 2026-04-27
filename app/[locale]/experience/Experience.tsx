@@ -39,7 +39,7 @@ export default function Experience(props: Props) {
         <p className="text-shadow">{props.period}</p>
       </div>
       <div className="flex flex-col items-center gap-[5px]">
-        <p className="text-shadow text-center">{t(props.responsibilities)}</p>
+        <p className="text-shadow text-center whitespace-pre-line">{t(props.responsibilities)}</p>
       </div>
     </div>
   );

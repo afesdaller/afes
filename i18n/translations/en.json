@@ -32,5 +32,11 @@
     "we_ar_studio": "Created several prototypes for AR/VR applications using Unity and relevant SDKs (AR Foundation, XR Interaction Toolkit). Developed a full-fledged application with interactive virtual environment engagement, focusing on UX, performance, and stability.",
     "red_beat": "Worked on a large top-down shooter project. Developed key game components: bot logic, NPC navigation and behavior, game map generation and optimization, and also worked on the UI and various project services.",
     "outsource": "I've worked on several projects. I handled everything related to the interface and assisted with backend logic. \n Front-end: Created adaptive layouts. Configured interface animations. \n Back-end: Implemented a user authentication system and assembled a convenient admin panel for content management."
+  },
+  "Projects": {
+    "project": "Currently, my main portfolio is this website. Here I've gathered everything I can do: from complex graphics on PixiJS/Canvas to architecture on Next.js. \n\n You can see the rest of my work, test assignments, and code experiments live on my GitHub. I'm constantly tinkering with something there, so the code speaks more about me than just screenshots."
+  },
+  "Contacts": {
+    "cta": "I am always open to interesting projects and new challenges!"
   }
 }

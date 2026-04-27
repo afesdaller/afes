@@ -11,7 +11,7 @@ export default function Page() {
       animate={{ opacity: 1, filter: "blur(0px)" }}
       exit={{ opacity: 0, filter: "blur(5px)" }}
       transition={{ duration: 0.7, ease: "easeOut" }}
-      className="flex flex-col gap-[30px]"
+      className="flex flex-col items-center gap-[30px]"
     >
       {experiences.map((ex, index) => (
         <div key={ex.company} className="flex flex-col items-center gap-[30px]">
