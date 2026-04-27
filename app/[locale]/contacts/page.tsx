@@ -58,6 +58,7 @@ export default function Page() {
           <p className="text-shadow">afesdaller</p>
         </a>
       </div>
+      <p className="text-shadow mt-[20px]">Kyiv, Ukraine 2026</p>
     </motion.div>
   );
 }
