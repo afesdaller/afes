@@ -24,6 +24,9 @@ export async function generateMetadata({
     metadataBase: new URL(baseUrl),
     title: t("title"),
     description: t("description"),
+    verification: {
+      google: "nrarmXzb-RS34BRV-ZU_WYs8jHovwVCWtcHutoimIBA",
+    },
     keywords: [
       "Sytnikov Afes Igor",
       "Creative Developer",
